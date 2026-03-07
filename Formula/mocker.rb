@@ -1,20 +1,13 @@
 class Mocker < Formula
   desc "Docker-compatible container CLI built on Apple's Containerization framework"
   homepage "https://github.com/us/mocker"
-  url "https://github.com/us/mocker/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "e05eeddf46cac1c022a40d1b1ef57dee9438cdee7e67f46f6cb0cb6ecf7186cf"
+  url "https://github.com/us/mocker/releases/download/v0.1.1/mocker-v0.1.1-arm64-apple-macosx.tar.gz"
+  sha256 "3d4b991019b922ae24ecfddefe638efe2e5b4d55faa74bd4f93b3cf20aeeec69"
   license "MIT"
-  version "0.1.0"
-
-  depends_on :macos
-  depends_on xcode: ["16.0", :build]
+  version "0.1.1"
 
   def install
-    system "swift", "build",
-           "-c", "release",
-           "--disable-sandbox",
-           "--product", "mocker"
-    bin.install ".build/release/mocker"
+    bin.install "mocker"
   end
 
   def caveats
@@ -27,6 +20,6 @@ class Mocker < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/mocker --version")
+    assert_match "0.1.1", shell_output("#{bin}/mocker --version")
   end
 end
