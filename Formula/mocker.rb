@@ -2,7 +2,7 @@ class Mocker < Formula
   desc "Docker-compatible container CLI built on Apple's Containerization framework"
   homepage "https://github.com/us/mocker"
   url "https://github.com/us/mocker/releases/download/v0.1.3/mocker-v0.1.3-arm64-apple-macosx.tar.gz"
-  sha256 "ccb7673c8d7e08c1d8ac1036393f52e698452380fd14438cd93977a5281a9dd0"
+  sha256 "3708248405ec94922a975e133bfe1afeaecde3316d16d7d1ae7073da644ef71e"
   license "MIT"
   version "0.1.3"
 
