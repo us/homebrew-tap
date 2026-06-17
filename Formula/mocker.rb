@@ -1,10 +1,10 @@
 class Mocker < Formula
   desc "Docker-compatible container CLI built on Apple's Containerization framework"
   homepage "https://github.com/us/mocker"
-  url "https://github.com/us/mocker/releases/download/v0.3.2/mocker-v0.3.2-arm64-apple-macosx.tar.gz"
-  sha256 "5fbe78050e64e5d44cdc04ba616d6d96bc9aa48832117542f32f1d78ec8f9b69"
+  url "https://github.com/us/mocker/releases/download/v0.4.0/mocker-v0.4.0-arm64-apple-macosx.tar.gz"
+  sha256 "ed216b3d9ee2b242d111cd55d95500443aba0f5227f33ac9310831aafaaa241d"
   license "MIT"
-  version "0.3.2"
+  version "0.4.0"
 
   def install
     bin.install "mocker"
@@ -20,6 +20,6 @@ class Mocker < Formula
   end
 
   test do
-    assert_match "0.3.2", shell_output("#{bin}/mocker --version")
+    assert_match "0.4.0", shell_output("#{bin}/mocker --version")
   end
 end
